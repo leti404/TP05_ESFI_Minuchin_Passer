@@ -17,6 +17,10 @@ export default function App() {
     setOrders([...orders, order]);
   }
 
+  function handleDeleteOrder(id) {
+    setOrders(orders.filter((o) => o.id !== id));
+  }
+
   const filteredOrders =
     filter === "all" ? orders : orders.filter((o) => o.status === filter);
 
@@ -26,7 +30,7 @@ export default function App() {
       <OrderFilter value={filter} onChange={setFilter} />
       <OrderStats orders={orders} />
       <NewOrderForm onAdd={handleAddOrder} uid={uid} />
-      <OrderList orders={filteredOrders} />
+      <OrderList orders={filteredOrders} onDelete={handleDeleteOrder} />
     </div>
   );
 }
