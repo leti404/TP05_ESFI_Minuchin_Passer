@@ -1,0 +1,42 @@
+.order-item {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  transition: transform 0.2s ease;
+}
+
+.order-item:hover {
+  transform: translateY(-2px);
+}
+
+.order-item .details {
+  flex: 1;
+  min-width: 200px;
+}
+
+.order-item .details h4 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.order-item .details p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.order-item .status {
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+}
+
+.status.pending { background: #fef3c7; color: #92400e; }
+.status.completed { background: #dcfce7; color: var(--success); }
+.status.canceled { background: #fee2e2; color: var(--danger); }

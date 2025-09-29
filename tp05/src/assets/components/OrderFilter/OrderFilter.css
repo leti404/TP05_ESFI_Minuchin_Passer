@@ -1,0 +1,22 @@
+.order-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.order-filter select,
+.order-filter input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.order-filter select:focus,
+.order-filter input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
