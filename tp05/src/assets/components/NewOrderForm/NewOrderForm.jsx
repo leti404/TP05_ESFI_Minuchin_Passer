@@ -67,14 +67,16 @@ export default function NewOrderForm({ onAdd, uid }) {
             placeholder="Nombre"
             value={p.name}
             onChange={(e) => handleProductChange(index, "name", e.target.value)}
-          />
+          /> 
+          <h4> Cantidad</h4>
           <input
             type="number"
             placeholder="Cant."
             value={p.quantity}
             min="1"
             onChange={(e) => handleProductChange(index, "quantity", e.target.value)}
-          />
+          /> 
+          <h4> Precio</h4>
           <input
             type="number"
             placeholder="Precio"
